@@ -39,6 +39,7 @@ The basics are:
 Like this:
 
 ```
+<?php 
 include('CSource.php');
 $source = new CSource();
 
