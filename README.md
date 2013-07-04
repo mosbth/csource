@@ -1,13 +1,20 @@
 Display sourcecode using `source.php` and `CSource.php`
 ===========================================
 
-*A filebrowser in PHP*
+*A filebrowser in PHP.*
 
 This is a set of PHP code which displays the files in a directory and makes them clickable to view its source. The file `source.php` renders a webpage listing all files and folders in current directory by using the code in the class `CSource.php` and the style from `source.css`.
 
 Why? To aid in debugging, send the link of the sourcecode to a fellow programmer who can help you out.
 
 By Mikael Roos, me@mikaelroos.se
+
+
+Warning!
+-------------------------------------------
+
+Use this only in internal and secure environments. There is always security considerations when allowing your visitor to display sourceode like this. It might be secure, but you can never know.
+
 
 
 License
@@ -32,9 +39,9 @@ See the file `example.php` on how to use it in more detail and with code separat
 The basics are:
 
 1. Include the classfile `CSource.php`.
-2. Create a object.
+2. Create a object `$source = new CSource()`.
 3. Include the stylesheet `source.css`.
-4. Call `CSource::View()`.
+4. Call `$source->View()`.
 
 Like this:
 
@@ -63,6 +70,12 @@ The following files exists in this folder. Click to view.
 
 History
 -------------------------------------------
+
+
+v1.0.x (latest)
+
+* Added warning message in README for security considerations.
+* Change in-depth description after comment by johan.
 
 
 v1.0.0 (2013-07-04)
@@ -141,5 +154,5 @@ Added rownumbers and enabled linking to specific row-number.
  .  
 ..:
 
-Copyright (c) 2013 Mikael Roos
+Copyright (c) 2010 - 2013 Mikael Roos
 
