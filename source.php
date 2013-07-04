@@ -76,15 +76,21 @@ class CSource {
       $this->dir  = null;
     }
 
+    if($this->path == '.') {
+      $this->path = null;
+    }
+
     $this->breadcrumb = empty($this->path) ? array() : explode('/', $this->path);
+    //echo "<pre>" . print_r($this, 1) . "</pre>";
 
     // Check that dir lies below securedir
-    $msg = "<i>WARNING: The path you have selected is not a valid path or restricted due to security constraints.</i>";
+    $this->message = null;
+    $msg = "<p><i>WARNING: The path you have selected is not a valid path or restricted due to security constraints.</i></p>";
     if(substr_compare($this->secureDir, $this->dir, 0, strlen($this->secureDir))) {
       $this->file = null;
       $this->extension = null;
       $this->dir  = null;
-      echo $msg;
+      $this->message = $msg;
     }
 
     // Check that all parts of the path is valid items
@@ -93,12 +99,11 @@ class CSource {
         $this->file = null;
         $this->extension = null;
         $this->dir  = null;
-        echo $msg;
+        $this->message = $msg;
         break;
       }
     }
 
-    //echo "<pre>" . print_r($this, 1) . "</pre>";
   }
 
 
@@ -107,7 +112,7 @@ class CSource {
    * List the sourcecode.
    */
   public function View() {
-    return $this->GetBreadcrumbFromPath() . $this->ReadCurrentDir() . $this->GetFileContent();
+    return $this->GetBreadcrumbFromPath() . $this->message . $this->ReadCurrentDir() . $this->GetFileContent();
   }
 
 
@@ -146,7 +151,8 @@ class CSource {
       }
 
       $file = basename($val) . (is_dir($val) ? '/' : null);
-      $html .= "<li><a href='?path={$this->path}/{$file}'>{$file}</a></li>\n";
+      $path = (empty($this->path) ? null : $this->path . '/') . $file;
+      $html .= "<li><a href='?path={$path}'>{$file}</a></li>\n";
     }
     $html .= "</ul>\n";
 
@@ -279,6 +285,9 @@ EOD;
 
 }
 
+
+
+
 /**
  * Do it.
  *
@@ -290,6 +299,7 @@ $source = new CSource();
 <title>View sourceode</title>
 <meta name="robots" content="noindex" />
 <meta name="robots" content="noarchive" />
+<meta name="robots" content="nofollow" />
 <style>
 /**
  * Style for source.php

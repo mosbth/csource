@@ -22,6 +22,7 @@ $source = new CSource();
 <title>View sourceode</title>
 <meta name="robots" content="noindex" />
 <meta name="robots" content="noarchive" />
+<meta name="robots" content="nofollow" />
 <link rel='stylesheet' type='text/css' href='source.css'/>
 <body>
 <h1>View sourcecode</h1>

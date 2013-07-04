@@ -11,15 +11,50 @@ By Mikael Roos, me@mikaelroos.se
 License
 -------------------------------------------
 
-License according to MIT.
+Opensource and free software. License according to MIT.
 
 
 
 How-To-Do-It
 -------------------------------------------
 
+###The quick version
+
+Get the code for `source.php` and save it in a directory. Point your browser to it.
 
 
+###In depth
+
+See the file `example.php` on how to use it in more detail and with code separated in files. 
+
+The basics are:
+
+1. Include the classfile.
+2. Create a object.
+3. Include the stylesheet.
+4. Call `CSource::View()`.
+
+Like this:
+
+```
+include('CSource.php');
+$source = new CSource();
+
+?><!doctype html>
+<html lang='en'>
+<meta charset='utf-8' />
+<title>View sourceode</title>
+<meta name="robots" content="noindex" />
+<meta name="robots" content="noarchive" />
+<meta name="robots" content="nofollow" />
+<link rel='stylesheet' type='text/css' href='source.css'/>
+<body>
+<h1>View sourcecode</h1>
+<p>
+The following files exists in this folder. Click to view.
+</p>
+<?=$source->View()?>
+```
 
 
 
