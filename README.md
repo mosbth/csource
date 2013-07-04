@@ -66,6 +66,8 @@ v1.0.0 (2013-07-04)
 
 * Moved to own repository to GitHub.
 * Rewrote old `source.php` to `CSource.php`.
+* Added example and some documentation.
+* Live example at http://dbwebb.se/kod-exempel/display-and-browse-files-using-php/
 
 
 
