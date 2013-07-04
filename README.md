@@ -29,9 +29,9 @@ See the file `example.php` on how to use it in more detail and with code separat
 
 The basics are:
 
-1. Include the classfile.
+1. Include the classfile `CSource.php`.
 2. Create a object.
-3. Include the stylesheet.
+3. Include the stylesheet `source.css`.
 4. Call `CSource::View()`.
 
 Like this:
