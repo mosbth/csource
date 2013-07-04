@@ -1,5 +1,7 @@
-Display sourcecode and filebrowser using `source.php` and `CSource.php`
+Display sourcecode using `source.php` and `CSource.php`
 ===========================================
+
+*A filebrowser in PHP*
 
 This is a set of PHP code which displays the files in a directory and makes them clickable to view its source. The file `source.php` renders a webpage listing all files and folders in current directory by using the code in the class `CSource.php` and the style from `source.css`.
 
