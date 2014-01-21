@@ -3,7 +3,7 @@
  * Class for display sourcecode.
  *
  * @author Mikael Roos, me@mikaelroos.se
- * @copyright Mikael Roos 2010 - 2013
+ * @copyright Mikael Roos 2010 - 2014
  * @link https://github.com/mosbth/csource
  */
 class CSource {
@@ -23,15 +23,19 @@ class CSource {
       'image_extensions' => array('png', 'jpg', 'jpeg', 'gif', 'ico'),
       'spaces_to_replace_tab' => '  ',
       'ignore' => array('.', '..', '.git', '.svn', '.netrc', '.ssh'),
+      'add_ignore' => null, // add array with additional filenames to ignore
       'secure_dir' => '.',  // Only display files below this directory
-      'base_dir'   => '.',  // Which directory to start look in, defaults to current working directory of th actual script.
+      'base_dir'   => '.',  // Which directory to start look in, defaults to current working directory of the actual script.
       'query_dir'  => isset($_GET['dir'])  ? strip_tags(trim($_GET['dir']))   : null, // Selected directory as ?dir=xxx
       'query_file' => isset($_GET['file']) ? strip_tags(trim($_GET['file']))  : null, // Selected directory as ?dir=xxx
       'query_path' => isset($_GET['path']) ? strip_tags(trim($_GET['path']))  : null, // Selected directory as ?dir=xxx
     );
+
+    // Add more files to ignore
     if(isset($options['add_ignore'])) {
       $default['ignore'] = array_merge($default['ignore'], $options['add_ignore']);
     }
+    
     $this->options = $options = array_merge($default, $options);
 
     //Backwards compatible with source.php query arguments for ?dir=xxx&file=xxx
@@ -79,6 +83,7 @@ class CSource {
     }
 
     $this->breadcrumb = empty($this->path) ? array() : explode('/', $this->path);
+
     //echo "<pre>" . print_r($this, 1) . "</pre>";
 
     // Check that dir lies below securedir
@@ -156,6 +161,7 @@ class CSource {
 
     return $html;
   }
+
 
 
   /**

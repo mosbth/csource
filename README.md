@@ -77,6 +77,8 @@ v1.0.x (latest)
 * Added warning message in README for security considerations.
 * Change in-depth description after comment by johan.
 * Added argument 'add_ignore' to add filenames that should be ignored by CSource.
+* Added 'add_ignore' as array option together with comment. Easier to read.
+* Updated source.php with latest CSource.php
 
 
 v1.0.0 (2013-07-04)
