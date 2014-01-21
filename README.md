@@ -72,7 +72,7 @@ History
 -------------------------------------------
 
 
-v1.0.x (latest)
+v1.0.1 (2012-01-21)
 
 * Added warning message in README for security considerations.
 * Change in-depth description after comment by johan.
