@@ -214,8 +214,8 @@ class CSource {
     $files = array(
       'config.php' => array(
         'match' => array('config.php', 'config.php~'),
-        'pattern' => array('/(DB_PASSWORD|DB_USER)(.+)/'),
-        'replace' => array('/*\1,  is removed and hidden for security reasons */);'),
+        'pattern' => array('/(\'|")(DB_PASSWORD|DB_USER)(.+)/'),
+        'replace' => array('/*\2,  is removed and hidden for security reasons */);'),
       ),
     );
 
