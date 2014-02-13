@@ -71,6 +71,10 @@ The following files exists in this folder. Click to view.
 History
 -------------------------------------------
 
+v1.0.x (latest)
+
+* Fixed the password filter in CSource.php
+
 
 v1.0.1 (2012-01-21)
 
