@@ -12,3 +12,7 @@ define('DB_USER', 		'Mikael');	// The username of the database
 define('DB_PASSWORD', 	'hemligt');	// The users password
 define('DB_DATABASE', 	'Skolan1');	// The name of the database to use
 
+
+$password = "hemligt";
+$pwd = "hemligt";
+$PASSWD = "hemligt";

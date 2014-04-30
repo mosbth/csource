@@ -52,6 +52,7 @@ class CSource {
     $this->suggestedPath  = $this->baseDir . '/' . $this->queryPath;
     $this->realPath       = realpath($this->suggestedPath);
     $this->pathinfo       = pathinfo($this->realPath);
+    $this->path           = null;
 
     if(is_dir($this->realPath)) {
       $this->file = null;
@@ -296,6 +297,7 @@ EOD;
  *
  */
 $source = new CSource();
+$content = $source->View();
 ?><!doctype html>
 <html lang='en'>
 <meta charset='utf-8' />
@@ -364,4 +366,4 @@ $source = new CSource();
 <p>
 The following files exists in this folder. Click to view.
 </p>
-<?=$source->View()?>
+<?=$content?>

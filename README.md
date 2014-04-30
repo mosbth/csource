@@ -74,6 +74,8 @@ History
 v1.0.x (latest)
 
 * Fixed the password filter in CSource.php
+* Images is not displayed correctly, wrong link #2.
+* Extend password checking filter to support more variants av hiding passwords #3.
 
 
 v1.0.1 (2012-01-21)
