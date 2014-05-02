@@ -213,9 +213,9 @@ class CSource {
 
     $pattern = array(
       '/(\'|")(DB_PASSWORD|DB_USER)(.+)/',
-      '/\$(password|passwd|pwd|pw)(.+)/i',
+      '/\$(password|passwd|pwd|pw|user|username)(.+)/i',
       //'/(\'|")(password|passwd|pwd|pw)(\'|")\d*=>\d*(.+)/i',
-      '/(\'|")(password|passwd|pwd|pw)(\'|")(.+)/i',
+      '/(\'|")(password|passwd|pwd|pw|user|username)(\'|")(.+)/i',
     );
 
 
