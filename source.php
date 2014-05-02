@@ -223,7 +223,7 @@ class CSource {
     $replace = array(
       '\1\2\1,  "' . $message . '");',
       '$\1 = "' . $message . '";',
-      '\1\2\3 => "' . $message . '";',
+      '\1\2\3 => "' . $message . '",',
     );
 
     /*
