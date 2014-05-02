@@ -21,9 +21,16 @@ $pwd = "hemligt";
 $PASSWD = "hemligt";
 
 return [
-    'dsn'     => "mysql:host=blu-ray.student.bth.se;dbname=jokd13;",
-    'username'        => "user",
-    'User'        => "user",
-    'password'        => "secret",
-    'Pwd'        => "secret",
+    'dsn'       => "mysql:host=blu-ray.student.bth.se;dbname=jokd13;",
+    'username'  => "user",
+    'User'      => "user",
+    'password'  => "secret",
+    'Pwd'       => "secret",
 ];
+
+
+//
+// These should NOT be matched
+//
+$new = $password;
+$new = 'password';
