@@ -214,6 +214,8 @@ class CSource {
     $pattern = array(
       '/(\'|")(DB_PASSWORD|DB_USER)(.+)/',
       '/\$(password|passwd|pwd|pw)(.+)/i',
+      //'/(\'|")(password|passwd|pwd|pw)(\'|")\d*=>\d*(.+)/i',
+      '/(\'|")(password|passwd|pwd|pw)(\'|")(.+)/i',
     );
 
 
@@ -221,6 +223,7 @@ class CSource {
     $replace = array(
       '\1\2\1,  "' . $message . '");',
       '$\1 = "' . $message . '";',
+      '\1\2\3 => "' . $message . '";',
     );
 
     /*
@@ -299,7 +302,6 @@ EOD;
 
 
 }
-
 
 
 
