@@ -77,6 +77,7 @@ v1.0.x (latest)
 * Images is not displayed correctly, wrong link #2.
 * Extend password checking filter to support more variants av hiding passwords #3.
 * Extended password check as #4.
+* Improved password check to not remove to much.
 
 
 v1.0.1 (2012-01-21)

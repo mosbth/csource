@@ -213,17 +213,17 @@ class CSource {
 
     $pattern = array(
       '/(\'|")(DB_PASSWORD|DB_USER)(.+)/',
-      '/\$(password|passwd|pwd|pw|user|username)(\s*=)(.+)/i',
+      '/\$(password|passwd|pwd|pw|user|username)(\s*=\s*[\'|"])(.+)/i',
       //'/(\'|")(password|passwd|pwd|pw)(\'|")\s*=>\s*(.+)/i',
-      '/(\'|")(password|passwd|pwd|pw|user|username)(\'|")(\s*=>)(.+)/i',
+      '/(\'|")(password|passwd|pwd|pw|user|username)(\'|")(\s*=>\s*[\'|"])(.+)/i',
     );
 
 
     $message = "Intentionally removed by CSource";
     $replace = array(
       '\1\2\1,  "' . $message . '");',
-      '$\1\2 "' . $message . '";',
-      '\1\2\3\4 "' . $message . '",',
+      '$\1\2' . $message . '";',
+      '\1\2\3\4' . $message . '",',
     );
 
     /*

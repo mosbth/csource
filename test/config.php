@@ -34,3 +34,9 @@ return [
 //
 $new = $password;
 $new = 'password';
+
+$user = $hemligt;
+
+return [
+    'user' => $hemligt,
+]
