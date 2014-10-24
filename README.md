@@ -73,6 +73,7 @@ History
 
 v1.0.x (latest)
 
+* Improced password filtering for anax database connection.
 * Fixed the password filter in CSource.php
 * Images is not displayed correctly, wrong link #2.
 * Extend password checking filter to support more variants av hiding passwords #3.

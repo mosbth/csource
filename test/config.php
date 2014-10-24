@@ -5,28 +5,49 @@
 //
 
 //
-// Setting for the database connection
+// These should be matched and removed
 //
 define('DB_HOST', 		'localhost');	// The database host
-define('DB_USER', 		'Mikael');	// The username of the database
-define('DB_PASSWORD', 	'hemligt');	// The users password
+define('DB_USER', 		'user');	// The username of the database
+define('DB_PASSWORD', 	"secret");	// The users password
 define('DB_DATABASE', 	'Skolan1');	// The name of the database to use
 
 $username = "hemligt";
 $user = "hemligt";
-$USER = "hemligt";
+$USER = 'hemligt';
+
+    $username = "hemligt";
+    $user = "hemligt";
+    $USER = 'hemligt';
 
 $password = "hemligt";
 $pwd = "hemligt";
-$PASSWD = "hemligt";
+$PASSWD = 'hemligt';
+
+    $password = "hemligt";
+    $pwd = "hemligt";
+    $PASSWD = 'hemligt';
 
 return [
-    'dsn'       => "mysql:host=blu-ray.student.bth.se;dbname=jokd13;",
+    'dsn'       => "mysql:host=blu-ray.student.bth.se;dbname=user13;",
     'username'  => "user",
-    'User'      => "user",
+    'User'      => 'user',
     'password'  => "secret",
-    'Pwd'       => "secret",
+    'Pwd'       => 'secret'
 ];
+
+
+// From anax
+$anax['db']['username']       = "user"; 
+$anax['db']['username']       = 'user'; 
+$anax['db']['password']       = "secret"; 
+$anax['db']['password']       = 'secret'; 
+
+    $anax['db']['username']       = "user"; 
+    $anax['db']['username']       = 'user'; 
+    $anax['db']['password']       = "secret"; 
+    $anax['db']['password']       = 'secret'; 
+
 
 
 //

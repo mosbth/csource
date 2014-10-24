@@ -213,25 +213,20 @@ class CSource {
 
     $pattern = array(
       '/(\'|")(DB_PASSWORD|DB_USER)(.+)/',
-      '/\$(password|passwd|pwd|pw|user|username)(\s*=\s*[\'|"])(.+)/i',
+      '/\$(password|passwd|pwd|pw|user|username)(\s*=\s*)(\'|")(.+)/i',
       //'/(\'|")(password|passwd|pwd|pw)(\'|")\s*=>\s*(.+)/i',
-      '/(\'|")(password|passwd|pwd|pw|user|username)(\'|")(\s*=>\s*[\'|"])(.+)/i',
+      '/(\'|")(password|passwd|pwd|pw|user|username)(\'|")(\s*=>\s*)(\'|")(.+)([\'|"].*)/i',
+      '/(\[[\'|"])(password|passwd|pwd|pw|user|username)([\'|"]\])(\s*=\s*)(\'|")(.+)([\'|"].*)/i',
     );
 
 
     $message = "Intentionally removed by CSource";
     $replace = array(
       '\1\2\1,  "' . $message . '");',
-      '$\1\2' . $message . '";',
-      '\1\2\3\4' . $message . '",',
+      '$\1\2\3' . $message . '\3;',
+      '\1\2\3\4\5' . $message . '\7',
+      '\1\2\3\4\5' . $message . '\7',
     );
-
-    /*
-    $file = 'config';
-    if (!strncmp($file, $this->file, strlen($file))) {
-      $this->content = preg_replace($pattern, $replace, $this->content);
-    }
-    */
 
     $this->content = preg_replace($pattern, $replace, $this->content);
   }
