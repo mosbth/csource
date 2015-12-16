@@ -181,4 +181,4 @@ Added rownumbers and enabled linking to specific row-number.
  .  
 ..:
 
-Copyright (c) 2010 - 2013 Mikael Roos
+Copyright (c) 2010 - 2015 Mikael Roos
