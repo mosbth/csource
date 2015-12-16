@@ -1,6 +1,11 @@
 Display sourcecode using `source.php` and `CSource.php`
 ===========================================
 
+[![Build Status](https://travis-ci.org/mosbth/csource.svg?branch=master)](https://travis-ci.org/mosbth/csource)
+[![Build Status](https://scrutinizer-ci.com/g/mosbth/csource/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mosbth/csource/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mosbth/csource/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mosbth/csource/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/62556c5e-2d98-480c-9055-622b2b285388/mini.png)](https://insight.sensiolabs.com/projects/62556c5e-2d98-480c-9055-622b2b285388)
+
 *A filebrowser in PHP.*
 
 This is a set of PHP code which displays the files in a directory and makes them clickable to view its source. The file `source.php` renders a webpage listing all files and folders in current directory by using the code in the class `CSource.php` and the style from `source.css`.
@@ -73,6 +78,8 @@ History
 
 v1.1.0 (2015-12-16)
 
+* Add badge from SensioLabsInsight.
+* Add scrutinizer for build and test.
 * Use travis to build and test.
 * Fix validation for codestyle phpcs.
 * Fix validation for coding phpmd.

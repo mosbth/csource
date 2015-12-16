@@ -92,8 +92,6 @@ class CSource
 
         $this->breadcrumb = empty($this->path) ? [] : explode('/', $this->path);
 
-        //echo "<pre>" . print_r($this, 1) . "</pre>";
-
         // Check that dir lies below securedir
         $this->message = null;
         $msg = "<p><i>WARNING: The path you have selected is not a valid path or restricted due to security constraints.</i></p>";
