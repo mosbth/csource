@@ -7,10 +7,10 @@
 //
 // These should be matched and removed
 //
-define('DB_HOST', 		'localhost');	// The database host
-define('DB_USER', 		'user');	// The username of the database
-define('DB_PASSWORD', 	"secret");	// The users password
-define('DB_DATABASE', 	'Skolan1');	// The name of the database to use
+define('DB_HOST',         'localhost');    // The database host
+define('DB_USER',         'user');    // The username of the database
+define('DB_PASSWORD',     "secret");    // The users password
+define('DB_DATABASE',     'Skolan1');    // The name of the database to use
 
 $username = "hemligt";
 $user = "hemligt";
@@ -60,4 +60,4 @@ $user = $hemligt;
 
 return [
     'user' => $hemligt,
-]
+];

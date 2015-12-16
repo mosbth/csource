@@ -47,7 +47,7 @@ Like this:
 
 ```
 <?php
-include('CSource.php');
+require 'CSource.php';
 $source = new CSource();
 
 ?><!doctype html>
@@ -70,6 +70,13 @@ The following files exists in this folder. Click to view.
 
 History
 -------------------------------------------
+
+v1.1.0 (2015-12-16)
+
+* Use travis to build and test.
+* Fix validation for codestyle phpcs.
+* Fix validation for coding phpmd.
+
 
 v1.0.2 (2015-12-16)
 
