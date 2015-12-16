@@ -71,7 +71,7 @@ The following files exists in this folder. Click to view.
 History
 -------------------------------------------
 
-v1.0.x (latest)
+v1.0.2 (2015-12-16)
 
 * Fix bug with empty extension, fix #5.
 * Improced password filtering for anax database connection.
@@ -82,7 +82,7 @@ v1.0.x (latest)
 * Improved password check to not remove to much.
 
 
-v1.0.1 (2012-01-21)
+v1.0.1 (2014-01-21)
 
 * Added warning message in README for security considerations.
 * Change in-depth description after comment by johan.
